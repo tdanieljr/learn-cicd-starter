@@ -15,7 +15,7 @@ func TestGetAPI(t *testing.T) {
 	req.Header.Set("Authorization", "ApiKey secret-key-123")
 
 	key, err := GetAPIKey(req.Header)
-	if !reflect.DeepEqual(key, " secret-key-123") {
+	if !reflect.DeepEqual(key, "secret-key-123") {
 		t.Fatal("wrong key extracted")
 	}
 }
